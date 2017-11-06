@@ -42,7 +42,7 @@ func NewVerificationService(apiKey string, baseUrl string) *VerificationService 
 }
 
 func (s *VerificationService) StartVerification(method string, countryCode int, phoneNumber string, codeLength int, locale string) (*VerificationCreationResponse, error) {
-    if method != "sms" {
+    if method != "sms" && method != "call" {
         return nil, &errors.InvalidVerificationMethodError{1, fmt.Sprintf("Cannot request verification using %s", method)}
     }
     body2 := VerificationCreationRequest {
