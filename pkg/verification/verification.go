@@ -29,6 +29,7 @@ type VerificationCreationResponse struct {
     Carrier     string  `json:"carrier"`
     IsCellphone bool    `json:"is_cellphone"`
     Message     string  `json:"message"`
+    SecondsToExpire int `json:"seconds_to_expire"`
     UUID        string  `json:"uuid"`
     IsSuccess   bool    `json:"success"`
 }
